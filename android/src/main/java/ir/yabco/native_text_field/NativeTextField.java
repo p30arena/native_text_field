@@ -1,11 +1,16 @@
 package ir.yabco.native_text_field;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.ActionMode;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
@@ -24,6 +29,7 @@ public class NativeTextField implements PlatformView, MethodCallHandler, EventCh
   final EventChannel textChangeEventChannel;
   TextWatcher textWatcher;
 
+  @TargetApi(Build.VERSION_CODES.HONEYCOMB)
   NativeTextField(Context _context, BinaryMessenger messenger, int id) {
     context = _context;
     methodChannel = new MethodChannel(messenger, "native_text_field_" + id);
@@ -32,6 +38,23 @@ public class NativeTextField implements PlatformView, MethodCallHandler, EventCh
     textChangeEventChannel.setStreamHandler(this);
 
     editText = new EditText(context);
+    editText.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+
+      public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+        return false;
+      }
+
+      public void onDestroyActionMode(ActionMode mode) {
+      }
+
+      public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+        return false;
+      }
+
+      public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+        return false;
+      }
+    });
     editText.setTextColor(Color.BLACK);
   }
 
