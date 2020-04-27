@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c19fef8b-c95a-40b9-a423-c64d06647de1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/ir/yabco/native_text_field/NativeTextFieldPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/ir/yabco/native_text_field/NativeTextFieldPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/native_text_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/native_text_field.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/native_text_field.iml" beforeDir="false" afterPath="$PROJECT_DIR$/native_text_field.iml" afterDir="false" />
-    </list>
+    <list default="true" id="c19fef8b-c95a-40b9-a423-c64d06647de1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -25,7 +17,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_One_API_23" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_23" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
