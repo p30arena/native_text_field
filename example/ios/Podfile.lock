@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - native_text_field (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - native_text_field (from `.symlinks/plugins/native_text_field/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  native_text_field:
+    :path: ".symlinks/plugins/native_text_field/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  native_text_field: ab3fb66bac784fca79c0f14c5faabcd1816238c8
+
+PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83
+
+COCOAPODS: 1.9.1

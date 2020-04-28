@@ -36,25 +36,27 @@ class _NativeTextFieldState extends State<NativeTextField> {
 
   @override
   Widget build(BuildContext context) {
-    if (defaultTargetPlatform == TargetPlatform.android) {
-      return GestureDetector(
-        onLongPress: () {
-          showDialog(
-            context: context,
-            builder: (context) => AlertDialog(
-              content: Text("long press"),
-            ),
+    final Widget platformView = defaultTargetPlatform == TargetPlatform.android
+        ? AndroidView(
+            viewType: 'native_text_field',
+            onPlatformViewCreated: _onPlatformViewCreated,
+          )
+        : UiKitView(
+            viewType: 'native_text_field',
+            onPlatformViewCreated: _onPlatformViewCreated,
           );
-        },
-        child: AndroidView(
-          viewType: 'native_text_field',
-          onPlatformViewCreated: _onPlatformViewCreated,
-        ),
-      );
-    }
 
-    return Text(
-        '$defaultTargetPlatform is not yet supported by the text_view plugin');
+    return GestureDetector(
+      onLongPress: () {
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            content: Text("long press"),
+          ),
+        );
+      },
+      child: platformView,
+    );
   }
 
   void _onPlatformViewCreated(int id) {
